@@ -1,7 +1,7 @@
 # CS2 Precise Server Picker
 ### Automatically receives an up-to-date list of all official CS2 servers, checks the ping to each of them (including each specific one within a country) and blocks all servers with a ping higher than specified using a Windows Firewall. 
 
-Requires Node.js installed to work, ~10 seconds to finish.
+Requires [Node.js](https://nodejs.org/) installed to work, ~10 seconds to finish.
 
 Comparing to CS2 Server Picker, this tool allows you to block not all servers in a particular country, but specifically those that are bad with your specific internet provider (ping to each specific server in one city may differ due to routing), leaving suitable ones.
 
