@@ -7,7 +7,7 @@ Comparing to CS2 Server Picker, this tool allows you to block not all servers in
 
 it is preferable to rerun the tool (delete firewall rule then ping and create new rule) on a daily basis.
 
-[Download](https://github.com/Feuerstarter/cs2-precise-server-picker/releases/download/1.0.0/cs2-precise-server-picker.zip) (unzip before using)
+[Download](https://github.com/Feuerstarter/cs2-precise-server-picker/releases/download/1.0.1/cs2-precise-server-picker.zip) (unzip before using)
 
 ## Usage
 ### config.js
