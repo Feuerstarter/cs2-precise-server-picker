@@ -3,8 +3,8 @@ import ping from "ping";
 import fs from "fs";
 import { config } from "./config.js";
 
-console.log("Config (could be modified in config.js): ", config)
-console.log("Receiving official CS2 servers list...")
+console.log("Config (could be modified in config.js): ", config);
+console.log("Receiving official CS2 servers list...");
 const officialServersData = await axios.get(
   `https://api.steampowered.com/ISteamApps/GetSDRConfig/v1/?appid=730`
 );
@@ -36,7 +36,7 @@ for (const city of Object.values(officialServersData.data.pops)) {
   }
 }
 
-console.log("Pinging official CS2 servers...")
+console.log("Pinging official CS2 servers...");
 Promise.all(pingPromises).then(() => {
   allServers.forEach((server) => {
     if (server.ping > config.maxPing || server.ping === "unknown") {
@@ -46,10 +46,17 @@ Promise.all(pingPromises).then(() => {
     }
   });
 
-  console.log(`Good servers (ping<${config.maxPing}): `, serversToKeep);
+  if (serversToKeep.length) {
+    console.log(`Good servers (ping < ${config.maxPing}): `, serversToKeep);
+  } else {
+    console.log(`ERROR! No servers found with acceptable ping (${config.maxPing}). Please, change config or reduce network load and retry.`)
+    process.exit(1);
+  }
 
   fs.writeFile("servers_to_ban.txt", serverIpsToBan, (err) => {
     if (err) throw err;
-    console.log("All other (bad) servers IP's saved to file servers_to_ban.txt.");
+    console.log(
+      "All other (bad) server IP's are prepared and saved to file servers_to_ban.txt."
+    );
   });
 });
