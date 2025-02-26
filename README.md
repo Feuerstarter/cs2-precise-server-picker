@@ -11,7 +11,7 @@ it is preferable to rerun the tool (delete firewall rule then ping and create ne
 
 ## Usage
 ### config.js
-Could be edited to configure desired maximum ping (maxPing, default = 20), number of ping attempts (pingRetries, default = 4) and ping timeout (pingTimeout, in seconds, default = 1).
+Could be edited to configure desired maximum ping (maxPing, default = 25), number of ping attempts (pingRetries, default = 4) and ping timeout (pingTimeout, in seconds, default = 1).
 
 ![image](https://github.com/user-attachments/assets/37beb164-a0ef-4ac3-aa69-f034f54c1877)
 
