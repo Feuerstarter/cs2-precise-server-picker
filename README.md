@@ -7,6 +7,8 @@ Comparing to CS2 Server Picker, this tool allows you to block not all servers in
 
 it is preferable to rerun the tool (delete firewall rule then ping and create new rule) on a daily basis.
 
+[Download](https://github.com/Feuerstarter/cs2-precise-server-picker/releases/download/1.0.0/cs2-precise-server-picker.zip)
+
 ## config.js
 Could be edited to configure desired maximum ping (maxPing, default = 25), number of ping attempts (pingRetries, default = 4) and ping timeout time (pingTimeout, in seconds, default = 1).
 
